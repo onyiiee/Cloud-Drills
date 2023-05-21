@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudapp-drill
+spec:
+  selector:
+    matchLabels:
+      app: cloudapp-drill
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: cloudapp-drill
+    spec:
+      containers:
+      - name: scacloudproject
+        image: onyiiee/demoapp1:release0.1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000

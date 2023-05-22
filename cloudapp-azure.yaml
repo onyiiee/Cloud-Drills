@@ -18,7 +18,7 @@ spec:
         - name: scacloudproject
           image: cloudproject1.azurecr.io/onyiiee/demoapp1:release0.1
           ports:
-            - containerPort: 5000
+          - containerPort: 5000
 ---
 
 apiVersion: v1
